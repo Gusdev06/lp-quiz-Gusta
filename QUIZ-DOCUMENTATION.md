@@ -2,8 +2,7 @@
 
 ## Visão Geral
 
-Sistema de quiz de 7 perguntas implementado para segmentar visitantes em 3 perfis diferentes e mostrar um resultado personalizado antes da oferta.
-
+Sistema de quiz de 7 perguntas implementado para segmentar visitantes em 3 perfis diferentes e mostrar um resultado personalizado antes da oferta
 ## Fluxo do Quiz
 
 ```
