@@ -163,11 +163,11 @@ export function ScreenOferta({ onNext }: ScreenOfertaProps) {
         <span className="text-gray-400 font-medium line-through mb-1 text-sm relative z-10">R$97</span>
 
         <div className="flex items-center gap-2 mb-2 relative z-10">
-          <span className="text-2xl font-bold text-black mt-2">12x de</span>
-          <span className="text-6xl md:text-7xl font-sans font-black tracking-[-0.04em] text-[#00A13C] leading-none">R$9,86</span>
+          <span className="text-2xl font-bold text-black mt-2">6x de</span>
+          <span className="text-6xl md:text-7xl font-sans font-black tracking-[-0.04em] text-[#00A13C] leading-none">R$5,64</span>
         </div>
 
-        <span className="text-gray-500 font-medium text-sm mb-6 relative z-10">ou R$97,00 à vista</span>
+        <span className="text-gray-500 font-medium text-sm mb-6 relative z-10">ou R$27,90 à vista</span>
 
         <p className="text-gray-400 text-xs text-center relative z-10">
           Oferta exclusiva de lançamento por tempo limitado.
@@ -176,10 +176,7 @@ export function ScreenOferta({ onNext }: ScreenOfertaProps) {
 
       {/* BOTÃO E CHECKOUT CTA */}
       <a
-        href={profileType === "aumentar-empresa"
-          ? "https://pay.hub.la/calhPA4ZdtY0szoI7xCY"
-          : "https://pay.hub.la/RjuJKW2JDGYwnlDl8GEz"
-        }
+        href="https://pay.hub.la/K9i48YP1IZcxEKfw1AuW"
         className="w-full py-5 px-6 bg-[#008A33] hover:bg-[#007029] text-white text-[15px] font-bold tracking-wide rounded-2xl shadow-[0_10px_35px_rgba(0,161,60,0.3)] transition-all hover:-translate-y-1 hover:shadow-[0_15px_45px_rgba(0,161,60,0.4)] flex items-center justify-center mb-12"
       >
         DESBLOQUEAR MEU ACESSO AGORA!!

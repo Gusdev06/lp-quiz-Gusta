@@ -42,8 +42,7 @@ export function ScreenEntrada({ onNext }: ScreenEntradaProps) {
 
       {/* Main Title */}
       <h1 className="font-heading text-[23px] md:text-[36px] font-bold leading-tight tracking-[-0.02em] mb-6 text-balance max-w-[600px] px-4 text-black">
-        Quem dominar IA agora, vai dominar o mercado amanhã. <br className="hidden md:block" />
-        <span className="text-[#FF0000]">Você vai ficar de fora?</span>
+        Aprenda a criar modelos de I.A realistas, mantendo 100% o mesmo rosto, para escalar conteúdos, fortalecer sua marca e vender todos os dias <span className="text-[#FF0000]">sem precisar aparecer ou produzir vídeos!</span>
       </h1>
 
 
@@ -59,7 +58,7 @@ export function ScreenEntrada({ onNext }: ScreenEntradaProps) {
 
       <div className="w-full max-w-[400px] mb-6">
         <p className="text-sm font-medium text-black leading-relaxed mb-4">
-          Aprenda a criar modelos de I.A realistas, mantendo 100% o mesmo rosto, para escalar conteúdos, fortalecer sua marca e vender todos os dias sem precisar aparecer ou produzir vídeos!
+          Quem dominar IA agora, vai dominar o mercado amanhã. Você vai ficar de fora?
         </p>
         <p className="text-sm font-bold text-black animate-pulse">
           Clique no botão para continuar 👇
