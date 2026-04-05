@@ -163,7 +163,7 @@ export function ScreenOferta({ onNext }: ScreenOfertaProps) {
 
         <div className="flex items-center gap-2 mb-2 relative z-10">
           <span className="text-2xl font-bold text-black mt-2">6x de</span>
-          <span className="text-6xl md:text-7xl font-sans font-black tracking-[-0.04em] text-[#00A13C] leading-none">R$9,66</span>
+          <span className="text-6xl md:text-7xl font-sans font-black tracking-[-0.04em] text-[#00A13C] leading-none">R$8,90</span>
         </div>
 
         <span className="text-gray-500 font-medium text-sm mb-6 relative z-10">ou R$47,90 à vista</span>
