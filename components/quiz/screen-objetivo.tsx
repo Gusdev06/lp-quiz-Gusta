@@ -37,17 +37,6 @@ export function ScreenObjetivo({ onNext }: ScreenObjetivoProps) {
                         "Outro"
                     ]
                 }
-            case "aumentar-empresa":
-                return {
-                    title: "Qual seria o maior salto na sua empresa nos próximos 30 dias?",
-                    options: [
-                        "Lotar a agenda com novos clientes sem depender de indicação",
-                        "Parar de pagar caro em agência e ter resultado de verdade",
-                        "Aumentar as vendas da minha loja ou e-commerce",
-                        "Ter clientes chegando mesmo quando não estou produzindo nada",
-                        "Outro"
-                    ]
-                }
             case "vender-servicos":
                 return {
                     title: "Qual desses empresários pagariam mais rápido pelo seu trabalho?",

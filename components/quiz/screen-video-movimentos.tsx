@@ -29,8 +29,6 @@ export function ScreenVideoMovimentos({ onNext }: ScreenVideoMovimentosProps) {
     switch (profileType) {
       case "shopee-tiktok":
         return <>Você pode <span className="text-[green]">roubar os movimentos</span> de vídeos virais e clonar o que já vende rápido! 👇😱</>
-      case "aumentar-empresa":
-        return <>Você pode <span className="text-[green]">roubar os movimentos</span> das lojas concorrentes e replicá-los na sua marca! 👇😱</>
       case "vender-servicos":
         return <>Você pode <span className="text-[green]">roubar os movimentos</span> em alta e empacotar isso como serviço pronto pros clientes! 👇😱</>
       case "fechar-parcerias":

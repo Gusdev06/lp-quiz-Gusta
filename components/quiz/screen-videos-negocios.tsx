@@ -30,8 +30,6 @@ export function ScreenVideosNegocios({ onNext }: ScreenVideosNegociosProps) {
     switch (profileType) {
       case "shopee-tiktok":
         return <>Você Cria Vídeos Assim na <span className="text-[green]">Shopee</span> e Vende <span className="text-[green]">BEM Mais</span> Como Afiliado</>
-      case "aumentar-empresa":
-        return <>Você Cria Vídeos Assim Para a <span className="text-[green]">Sua Empresa</span> e Vende os <span className="text-[green]">Seus Produtos</span></>
       case "vender-servicos":
         return <>Você Cria Vídeos Assim Para <span className="text-[green]">QUALQUER Negócio</span> e Vende Por <span className="text-[green]">R$500+</span> Cada</>
       case "fechar-parcerias":

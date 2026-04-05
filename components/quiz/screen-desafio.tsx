@@ -24,12 +24,6 @@ export function ScreenDesafio({ onNext }: ScreenDesafioProps) {
       </h2>
 
       {/* Subtitle dinâmico baseado no perfil */}
-      {profileType === "aumentar-empresa" && (
-        <p className="text-[black] text-base leading-relaxed mb-8 max-w-[360px]">
-          Empresas tradicionais exigem estruturas gigantescas. Na era da IA com clones, se você não souber diferenciar, ficará para trás. Qual foi criada com inteligência artificial para vender mais?
-        </p>
-      )}
-
       {profileType === "shopee-tiktok" && (
         <p className="text-[black] text-base leading-relaxed mb-8 max-w-[360px]">
           Fazer dinheiro como afiliado exige testes criativos que não param de dar bloqueio. Uma destas influenciadoras nunca cansa, qual é ela?

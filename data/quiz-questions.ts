@@ -12,17 +12,17 @@ export const filterQuestion: QuizQuestion = {
     },
     {
       id: "1b",
-      text: "Divulgando meu próprio negócio e atraindo clientes",
-      tag: "aumentar-empresa"
-    },
-    {
-      id: "1c",
-      text: "Prestando esse serviço de IA para outras empresas",
+      text: "Oferecendo esse serviço de IA como freelancer pra empresas",
       tag: "vender-servicos"
     },
     {
+      id: "1c",
+      text: "Criar uma Influenciadora pra monetizar e fechar com marcas",
+      tag: "fechar-parcerias"
+    },
+    {
       id: "1d",
-      text: "Criar uma Influenciadora para fechar com marcas e monetizar",
+      text: "Ganhar renda extra sem precisar aparecer na câmera",
       tag: "fechar-parcerias"
     }
   ]
@@ -54,31 +54,7 @@ export const quizBranches: Record<string, QuizQuestion[]> = {
     }
   ],
 
-  // Caminho 2: Empresas Próprias / Negócios Locais
-  "aumentar-empresa": [
-    {
-      id: 2,
-      title: "Hoje, o seu negócio sofre mais com qual desses problemas?",
-      options: [
-        { id: "2a", text: "Pouco engajamento, as pessoas não se importam com a loja", tag: "aumentar-empresa" },
-        { id: "2b", text: "Zero tempo livre do dono para gravar conteúdo criativo", tag: "aumentar-empresa" },
-        { id: "2c", text: "Equipe tímida ou vergonha na hora de filmar vídeos", tag: "aumentar-empresa" },
-        { id: "2d", text: "A concorrência chama muito mais a atenção que eu", tag: "aumentar-empresa" }
-      ]
-    },
-    {
-      id: 3,
-      title: "Qual desses cenários te irrita mais hoje?",
-      options: [
-        { id: "3a", text: "Pagar R$3.000+ em agência todo mês sem ver retorno real", tag: "aumentar-empresa" },
-        { id: "3b", text: "Minha concorrência aparece toda semana e eu sumo das redes", tag: "aumentar-empresa" },
-        { id: "3c", text: "Depender de funcionário que some quando mais preciso", tag: "aumentar-empresa" },
-        { id: "3d", text: "Ver minha loja ignorada enquanto perfis menores bomam", tag: "aumentar-empresa" }
-      ]
-    }
-  ],
-
-  // Caminho 3: Freelancers / Agências vendendo serviços
+  // Caminho 2: Freelancers / Agências vendendo serviços
   "vender-servicos": [
     {
       id: 2,

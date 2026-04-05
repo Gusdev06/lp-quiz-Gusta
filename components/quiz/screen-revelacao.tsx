@@ -66,13 +66,13 @@ export function ScreenRevelacao({ onNext }: ScreenRevelacaoProps) {
       </div>
 
       {/* Title */}
-      <h2 className="font-heading text-[32px] font-bold tracking-[-0.02em] mb-4 text-black">
-        As duas são IA.
+      <h2 className="font-heading text-[32px] md:text-[36px] font-bold tracking-[-0.02em] mb-3 text-black">
+        Resposta: <span className="text-[#FF0000]">as duas são IA.</span>
       </h2>
 
       {/* Subtitle */}
-      <p className="text-[#FF0000] font-bold text-base leading-relaxed mb-8 max-w-[360px]">
-        Nenhuma delas existe. Ambas foram criadas do zero com inteligência artificial.
+      <p className="text-gray-700 font-medium text-[15px] leading-relaxed mb-8 max-w-[380px]">
+        Nenhuma das duas existe. Foram criadas do zero — com rosto, cabelo, roupa e cenário escolhidos por <b>uma pessoa comum, em menos de 10 minutos</b>.
       </p>
 
       <div className="w-full relative mb-8 rounded-2xl overflow-hidden glass animate-in fade-in zoom-in duration-700 delay-300">
@@ -94,12 +94,6 @@ export function ScreenRevelacao({ onNext }: ScreenRevelacaoProps) {
             <span className="text-[#00B360] font-semibold">10 vendas como afiliada na Shopee</span> sem nunca levar um bloqueio de conta.
           </p>
         )}
-        {profileType === "aumentar-empresa" && (
-          <p className="text-gray-700 leading-relaxed">
-            <span className="font-medium">Uma delas é a Camila.</span> Ela foi responsável por um {" "}
-            <span className="text-[#00B360] font-semibold">aumento de 55% nas vendas da empresa em apenas 7 dias</span>, postando 3 vídeos na semana.
-          </p>
-        )}
         {profileType === "vender-servicos" && (
           <p className="text-gray-700 leading-relaxed">
             <span className="font-medium">Uma delas é a Camila.</span> Uma agência tradicional cobraria R$ 3.000 mensais por ela, mas você pode gerar {" "}
@@ -116,7 +110,7 @@ export function ScreenRevelacao({ onNext }: ScreenRevelacaoProps) {
 
       {/* Button */}
       <PrimaryButton onClick={onNext}>
-        Como isso é possível?
+        Quero ver como criar a minha
       </PrimaryButton>
     </div>
   )

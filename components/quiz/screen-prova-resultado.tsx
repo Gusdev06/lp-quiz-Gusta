@@ -35,14 +35,6 @@ export function ScreenProvaResultado({ onNext }: ScreenProvaResultadoProps) {
           footer: "Sem rosto na tela, sem depender do meu humor para gravar... apenas escala absurda em múltiplas contas.",
           imageSrc: "/images/shopee_fat.webp"
         }
-      case "aumentar-empresa":
-        return {
-          title: <><span className="text-[green]">R$2.150</span> de lucro extra pra loja.</>,
-          subtitle: "Com um único vídeo postado.",
-          description: "A Olivia apresentou nossos produtos no Reels e vendeu quase todo o nosso estoque do final de semana.",
-          footer: "Eu nunca mais precisei implorar para a equipe gravar ou pagar caro numa agência.",
-          imageSrc: "/images/print_empresario.webp"
-        }
       case "vender-servicos":
         return {
           title: <><span className="text-[green]">R$1.500</span> no primeiro contrato fechado.</>,

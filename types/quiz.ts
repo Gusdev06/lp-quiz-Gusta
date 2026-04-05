@@ -1,4 +1,4 @@
-export type QuizTag = "shopee-tiktok" | "aumentar-empresa" | "vender-servicos" | "fechar-parcerias" | "neutro"
+export type QuizTag = "shopee-tiktok" | "vender-servicos" | "fechar-parcerias" | "neutro"
 
 export type ProfileType = QuizTag | "indefinido"
 

@@ -40,16 +40,18 @@ export function ScreenEntrada({ onNext }: ScreenEntradaProps) {
         </span>
       </div> */}
 
+
       {/* Main Title */}
-      <h1 className="font-heading text-[23px] md:text-[36px] font-bold leading-tight tracking-[-0.02em] mb-6 text-balance max-w-[600px] px-4 text-black">
-        Quem dominar IA agora, vai dominar o mercado amanhã. <br className="hidden md:block" />
-        <span className="text-[#FF0000]">Você vai ficar de fora?</span>
+      <h1 className="font-heading text-[24px] md:text-[38px] font-bold leading-[1.15] tracking-[-0.02em] mb-4 text-balance max-w-[600px] px-2 text-black">
+        <span className="text-[#00A13C]">10 vendas em 3 dias</span> postando vídeos de uma modelo que <span className="underline decoration-[#D9FF02] decoration-[4px] underline-offset-2">não existe</span>.
       </h1>
 
-
+      <p className="text-[15px] text-gray-700 leading-relaxed mb-6 max-w-[420px] px-2">
+        Ela foi criada em <b>menos de 10 minutos</b>. Custo: <b>zero</b>. Eu te mostro exatamente como.
+      </p>
 
       {/* VSL Video */}
-      <div className="w-full max-w-[400px] mb-8">
+      <div className="w-full max-w-[400px] mb-6">
         <div
           dangerouslySetInnerHTML={{
             __html: `<vturb-smartplayer id="vid-697f8cbb1385ff513705f870" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer>`
@@ -59,7 +61,7 @@ export function ScreenEntrada({ onNext }: ScreenEntradaProps) {
 
       <div className="w-full max-w-[400px] mb-6">
         <p className="text-sm font-medium text-black leading-relaxed mb-4">
-          Aprenda a criar modelos de I.A realistas, mantendo 100% o mesmo rosto, para escalar conteúdos, fortalecer sua marca e vender todos os dias sem precisar aparecer ou produzir vídeos!
+          Aprenda a criar sua própria <b>influencer de IA realista</b> — mesmo rosto em 100% dos vídeos — para escalar conteúdo, fortalecer sua marca e vender todos os dias <b>sem aparecer, sem gravar, sem pagar influencer</b>.
         </p>
         <p className="text-sm font-bold text-black animate-pulse">
           Clique no botão para continuar 👇

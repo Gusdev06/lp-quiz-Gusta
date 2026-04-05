@@ -5,13 +5,11 @@ import { ScreenEntrada } from "@/components/quiz/screen-entrada"
 import { ScreenQuestion } from "@/components/quiz/screen-question"
 import { filterQuestion, quizBranches, fallbackQuestions } from "@/data/quiz-questions"
 import { useQuizContext } from "@/components/quiz/quiz-context"
-import { ScreenObjetivo } from "@/components/quiz/screen-objetivo"
 import { ScreenDesafio } from "@/components/quiz/screen-desafio"
 import { ScreenRevelacao } from "@/components/quiz/screen-revelacao"
 import { ScreenProvaResultado } from "@/components/quiz/screen-prova-resultado"
 import { ScreenUgcDemo } from "@/components/quiz/screen-ugc-demo"
 import { ScreenVideosNegocios } from "@/components/quiz/screen-videos-negocios"
-import { ScreenVideoMovimentos } from "@/components/quiz/screen-video-movimentos"
 import { ScreenPossibilidades } from "@/components/quiz/screen-possibilidades"
 import { ScreenDecisao } from "@/components/quiz/screen-decisao"
 import { ScreenOferta } from "@/components/quiz/screen-oferta"
@@ -23,10 +21,10 @@ export default function QuizFunil() {
   const [currentScreen, setCurrentScreen] = useState(1)
   const [isTransitioning, setIsTransitioning] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
-  const { setAnswer, setLeadData, calculateProfile, profileType } = useQuizContext()
+  const { setAnswer, calculateProfile, profileType } = useQuizContext()
 
-  // 1 (Entrada) + 3 (Perguntas) + 10 (VSL Restante com Oferta) = 14
-  const totalScreens = 14
+  // Fluxo enxuto: 1 Entrada + 3 Perguntas + 8 telas VSL/Oferta = 12
+  const totalScreens = 12
 
   // Lógica de Ramificação Multi-Quiz
   const specificQuestions = profileType !== "indefinido" ? quizBranches[profileType] : fallbackQuestions
@@ -38,9 +36,8 @@ export default function QuizFunil() {
     setTimeout(() => {
       setCurrentScreen((prev) => {
         let next = prev + 1
-        // Pular etapas
-        if (next === 10 && profileType === "shopee-tiktok") next++
-        if (next === 12 && profileType === "aumentar-empresa") next++
+        // VideosNegocios (9) não é relevante pra shopee-tiktok
+        if (next === 9 && profileType === "shopee-tiktok") next++
         return Math.min(next, totalScreens)
       })
       setIsTransitioning(false)
@@ -55,9 +52,7 @@ export default function QuizFunil() {
     setTimeout(() => {
       setCurrentScreen((prev) => {
         let prevScreen = prev - 1
-        // Pular etapas ao voltar
-        if (prevScreen === 12 && profileType === "aumentar-empresa") prevScreen--
-        if (prevScreen === 10 && profileType === "shopee-tiktok") prevScreen--
+        if (prevScreen === 9 && profileType === "shopee-tiktok") prevScreen--
         return Math.max(prevScreen, 1)
       })
       setIsTransitioning(false)
@@ -122,24 +117,20 @@ export default function QuizFunil() {
           />
         )
       case 5:
-        return <ScreenObjetivo {...screenProps} />
-      case 6:
         return <ScreenDesafio {...screenProps} />
-      case 7:
+      case 6:
         return <ScreenRevelacao {...screenProps} />
-      case 8:
+      case 7:
         return <ScreenProvaResultado {...screenProps} />
-      case 9:
+      case 8:
         return <ScreenUgcDemo {...screenProps} />
-      case 10:
+      case 9:
         return <ScreenVideosNegocios {...screenProps} />
-      case 11:
-        return <ScreenVideoMovimentos {...screenProps} />
-      case 12:
+      case 10:
         return <ScreenPossibilidades {...screenProps} />
-      case 13:
+      case 11:
         return <ScreenDecisao {...screenProps} />
-      case 14:
+      case 12:
         return <ScreenOferta onNext={() => { }} />
       default:
         return <ScreenEntrada {...screenProps} />

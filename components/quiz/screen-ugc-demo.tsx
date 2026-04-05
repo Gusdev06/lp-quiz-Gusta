@@ -30,8 +30,6 @@ export function ScreenUgcDemo({ onNext }: ScreenUgcDemoProps) {
     switch (profileType) {
       case "shopee-tiktok":
         return <>Você pode gerar reviews em massa para a <span className="text-[green]">Shopee / TikTok</span>👇</>
-      case "aumentar-empresa":
-        return <>Sua marca pode ter vídeos de demonstração com <span className="text-[green]">seus produtos</span>👇</>
       case "vender-servicos":
         return <>Você pode vender vídeos UGC altamente magnéticos para <span className="text-[green]">seus clientes</span>👇</>
       case "fechar-parcerias":
