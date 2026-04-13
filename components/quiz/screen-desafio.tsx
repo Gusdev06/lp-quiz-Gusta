@@ -55,7 +55,7 @@ export function ScreenDesafio({ onNext }: ScreenDesafioProps) {
               }`}
           >
             <Image
-              src="https://i.imgur.com/RfNcqjL.jpeg"
+              src="/img/RfNcqjL.jpeg"
               alt="Pessoa A"
               fill
               className="object-cover"
@@ -80,7 +80,7 @@ export function ScreenDesafio({ onNext }: ScreenDesafioProps) {
               }`}
           >
             <Image
-              src="https://i.imgur.com/7dknHb8.jpeg"
+              src="/img/7dknHb8.jpeg"
               alt="Pessoa B"
               fill
               className="object-cover"

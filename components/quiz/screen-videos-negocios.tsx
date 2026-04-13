@@ -1,9 +1,9 @@
 "use client"
 
 import { PrimaryButton } from "./primary-button"
-import { useEffect } from "react"
 import Image from "next/image"
 import { useQuizContext } from "./quiz-context"
+import { VturbPlayer } from "./vturb-player"
 
 interface ScreenVideosNegociosProps {
   onNext: () => void
@@ -11,20 +11,6 @@ interface ScreenVideosNegociosProps {
 
 export function ScreenVideosNegocios({ onNext }: ScreenVideosNegociosProps) {
   const { profileType } = useQuizContext()
-
-  useEffect(() => {
-    const s = document.createElement("script")
-    s.src = "https://scripts.converteai.net/8961d838-aff2-4dce-9b39-e84022d332ce/players/699111929256726183ccfd1d/v4/player.js"
-    s.async = true
-    document.head.appendChild(s)
-
-    return () => {
-      const existingScript = document.querySelector(`script[src="${s.src}"]`)
-      if (existingScript) {
-        existingScript.remove()
-      }
-    }
-  }, [])
 
   const getTitle = () => {
     switch (profileType) {
@@ -48,7 +34,7 @@ export function ScreenVideosNegocios({ onNext }: ScreenVideosNegociosProps) {
       {/* Image 1 */}
       <div className="w-full relative mb-8 animate-in fade-in zoom-in duration-700 delay-300">
         <Image
-          src="https://i.imgur.com/ku367IZ.jpeg"
+          src="/img/ku367IZ.jpeg"
           alt="Vídeos para negócios"
           width={400}
           height={400}
@@ -60,7 +46,7 @@ export function ScreenVideosNegocios({ onNext }: ScreenVideosNegociosProps) {
       {/* Image 2 */}
       <div className="w-full relative mb-8 animate-in fade-in zoom-in duration-700 delay-300">
         <Image
-          src="https://i.imgur.com/NdVzUml.jpeg"
+          src="/img/NdVzUml.jpeg"
           alt="Exemplos de vídeos"
           width={400}
           height={400}
@@ -69,13 +55,7 @@ export function ScreenVideosNegocios({ onNext }: ScreenVideosNegociosProps) {
       </div>
 
       {/* Video Player */}
-      <div className="w-full max-w-[400px] mb-8">
-        <div
-          dangerouslySetInnerHTML={{
-            __html: `<vturb-smartplayer id="vid-699111929256726183ccfd1d" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer>`
-          }}
-        />
-      </div>
+      <VturbPlayer videoId="699111929256726183ccfd1d" className="w-full max-w-[400px] mb-8" />
 
       {/* Button */}
       <PrimaryButton onClick={onNext}>

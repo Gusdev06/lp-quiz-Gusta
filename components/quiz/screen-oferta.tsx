@@ -102,12 +102,12 @@ export function ScreenOferta({ onNext }: ScreenOfertaProps) {
       {/* Imagem da Reportagem Exame */}
       <div className="w-full rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.06)] mb-8 bg-white p-4">
         <Image
-          src="https://i.imgur.com/gKuwTmT.jpeg"
+          src="/img/gKuwTmT.jpeg"
           alt="Reportagem Exame"
           width={500}
           height={600}
           className="w-full h-auto rounded-xl object-contain"
-          unoptimized
+          sizes="(max-width: 768px) 90vw, 500px"
         />
       </div>
 
@@ -198,13 +198,13 @@ export function ScreenOferta({ onNext }: ScreenOfertaProps) {
 
       <div className="w-full flex flex-col gap-6 mb-16">
         <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
-          <Image src="https://i.imgur.com/zRKXm61.jpeg" alt="Depoimento 1" width={400} height={300} className="w-full h-auto" unoptimized />
+          <Image src="/img/zRKXm61.jpeg" alt="Depoimento 1" width={400} height={300} className="w-full h-auto" sizes="(max-width: 768px) 90vw, 400px" loading="lazy" />
         </div>
         <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
-          <Image src="https://i.imgur.com/Qew7LLK.jpeg" alt="Depoimento 2" width={400} height={300} className="w-full h-auto" unoptimized />
+          <Image src="/img/Qew7LLK.jpeg" alt="Depoimento 2" width={400} height={300} className="w-full h-auto" sizes="(max-width: 768px) 90vw, 400px" loading="lazy" />
         </div>
         <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
-          <Image src="https://i.imgur.com/tM1Lbxl.jpeg" alt="Depoimento 3" width={400} height={300} className="w-full h-auto" unoptimized />
+          <Image src="/img/tM1Lbxl.jpeg" alt="Depoimento 3" width={400} height={300} className="w-full h-auto" sizes="(max-width: 768px) 90vw, 400px" loading="lazy" />
         </div>
       </div>
 

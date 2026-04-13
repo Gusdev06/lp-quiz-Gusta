@@ -1,29 +1,14 @@
 "use client"
 
-import { useEffect } from "react"
-import { ChevronDown, Users, BadgeCheck } from "lucide-react"
+import { Users, BadgeCheck } from "lucide-react"
 import { PrimaryButton } from "./primary-button"
+import { VturbPlayer } from "./vturb-player"
 
 interface ScreenEntradaProps {
   onNext: () => void
 }
 
 export function ScreenEntrada({ onNext }: ScreenEntradaProps) {
-  useEffect(() => {
-    // Load the vturb player script
-    const script = document.createElement("script")
-    script.src = "https://scripts.converteai.net/8961d838-aff2-4dce-9b39-e84022d332ce/players/697f8cbb1385ff513705f870/v4/player.js"
-    script.async = true
-    document.head.appendChild(script)
-
-    return () => {
-      // Cleanup script on unmount
-      const existingScript = document.querySelector(`script[src="${script.src}"]`)
-      if (existingScript) {
-        existingScript.remove()
-      }
-    }
-  }, [])
 
   return (
     <div className="flex flex-col items-center text-center animate-in fade-in slide-in-from-bottom-4 duration-500">
@@ -51,13 +36,7 @@ export function ScreenEntrada({ onNext }: ScreenEntradaProps) {
       </p>
 
       {/* VSL Video */}
-      <div className="w-full max-w-[400px] mb-6">
-        <div
-          dangerouslySetInnerHTML={{
-            __html: `<vturb-smartplayer id="vid-697f8cbb1385ff513705f870" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer>`
-          }}
-        />
-      </div>
+      <VturbPlayer videoId="697f8cbb1385ff513705f870" className="w-full max-w-[400px] mb-6" />
 
       <div className="w-full max-w-[400px] mb-6">
         <p className="text-sm font-medium text-black leading-relaxed mb-4">

@@ -1,10 +1,9 @@
 "use client"
 
 import { PrimaryButton } from "./primary-button"
-import { useEffect } from "react"
 import Image from "next/image"
 import { useQuizContext } from "./quiz-context"
-
+import { VturbPlayer } from "./vturb-player"
 
 interface ScreenProvaResultadoProps {
   onNext: () => void
@@ -12,18 +11,6 @@ interface ScreenProvaResultadoProps {
 
 export function ScreenProvaResultado({ onNext }: ScreenProvaResultadoProps) {
   const { profileType } = useQuizContext()
-
-  useEffect(() => {
-    const s = document.createElement("script");
-    s.src = "https://scripts.converteai.net/8961d838-aff2-4dce-9b39-e84022d332ce/players/697f7b726300fb8f8ee0296a/v4/player.js";
-    s.async = true;
-    document.head.appendChild(s);
-
-    return () => {
-      const existingScript = document.querySelector(`script[src="${s.src}"]`)
-      if (existingScript) existingScript.remove()
-    };
-  }, []);
 
   const getCopy = () => {
     switch (profileType) {
@@ -41,7 +28,7 @@ export function ScreenProvaResultado({ onNext }: ScreenProvaResultadoProps) {
           subtitle: "Entregando apenas 5 vídeos.",
           description: "Uma clínica de estética fechou correndo para ter a imagem da Olivia no Instagram vendendo os procedimentos deles.",
           footer: "Meu ticket para esse serviço subiu. Custo zero de estúdio. Margem de lucro de quase 100%.",
-          imageSrc: "https://i.imgur.com/faYfBOI.jpeg"
+          imageSrc: "/img/faYfBOI.jpeg"
         }
       case "fechar-parcerias":
       default:
@@ -50,7 +37,7 @@ export function ScreenProvaResultado({ onNext }: ScreenProvaResultadoProps) {
           subtitle: "E eu não precisei aparecer.",
           description: "Uma marca gringa pagou isso por um vídeo de 10 segundos da Olivia. Eu a criei, mas o rosto é apenas dela.",
           footer: "Sem a câmera no meu rosto. Sem vergonha de aparecer para conhecidos. Só resultado absurdo.",
-          imageSrc: "https://i.imgur.com/faYfBOI.jpeg"
+          imageSrc: "/img/faYfBOI.jpeg"
         }
     }
   }
@@ -89,13 +76,7 @@ export function ScreenProvaResultado({ onNext }: ScreenProvaResultadoProps) {
       </div>
 
       {/* Video Player */}
-      <div className="w-full max-w-[400px] mb-8">
-        {/* @ts-ignore */}
-        <vturb-smartplayer
-          id="vid-697f7b726300fb8f8ee0296a"
-          style={{ display: "block", margin: "0 auto", width: "100%" }}
-        />
-      </div>
+      <VturbPlayer videoId="697f7b726300fb8f8ee0296a" className="w-full max-w-[400px] mb-8" />
 
       {/* Description */}
       <p className="text-[green] font-bold text-base leading-relaxed mb-6 max-w-[360px]">
