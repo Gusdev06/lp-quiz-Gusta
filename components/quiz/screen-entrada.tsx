@@ -28,7 +28,7 @@ export function ScreenEntrada({ onNext }: ScreenEntradaProps) {
 
       {/* Main Title */}
       <h1 className="font-heading text-[24px] md:text-[38px] font-bold leading-[1.15] tracking-[-0.02em] mb-4 text-balance max-w-[600px] px-2 text-black">
-        <span className="text-[#00A13C]">10 vendas em 3 dias</span> postando vídeos de uma modelo que <span className="underline decoration-[#D9FF02] decoration-[4px] underline-offset-2">não existe</span>.
+        Descubra <span className="text-[#00A13C]">TUDO que é possível criar</span> com sua própria <span className="underline decoration-[#D9FF02] decoration-[4px] underline-offset-2">influencer de IA</span>.
       </h1>
 
       <p className="text-[15px] text-gray-700 leading-relaxed mb-6 max-w-[420px] px-2">

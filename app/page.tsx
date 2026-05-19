@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
+import { ScreenAbertura } from "@/components/quiz/screen-abertura"
 import { ScreenEntrada } from "@/components/quiz/screen-entrada"
 import { ScreenQuestion } from "@/components/quiz/screen-question"
 import { filterQuestion, quizBranches, fallbackQuestions } from "@/data/quiz-questions"
@@ -23,8 +24,8 @@ export default function QuizFunil() {
   const containerRef = useRef<HTMLDivElement>(null)
   const { setAnswer, calculateProfile, profileType } = useQuizContext()
 
-  // Fluxo enxuto: 1 Entrada + 3 Perguntas + 8 telas VSL/Oferta = 12
-  const totalScreens = 12
+  // Fluxo: 1 Abertura + 1 Entrada + 3 Perguntas + 8 telas VSL/Oferta = 13
+  const totalScreens = 13
 
   // Lógica de Ramificação Multi-Quiz
   const specificQuestions = profileType !== "indefinido" ? quizBranches[profileType] : fallbackQuestions
@@ -36,8 +37,8 @@ export default function QuizFunil() {
     setTimeout(() => {
       setCurrentScreen((prev) => {
         let next = prev + 1
-        // VideosNegocios (9) não é relevante pra shopee-tiktok
-        if (next === 9 && profileType === "shopee-tiktok") next++
+        // VideosNegocios (10) não é relevante pra shopee-tiktok
+        if (next === 10 && profileType === "shopee-tiktok") next++
         return Math.min(next, totalScreens)
       })
       setIsTransitioning(false)
@@ -52,7 +53,7 @@ export default function QuizFunil() {
     setTimeout(() => {
       setCurrentScreen((prev) => {
         let prevScreen = prev - 1
-        if (prevScreen === 9 && profileType === "shopee-tiktok") prevScreen--
+        if (prevScreen === 10 && profileType === "shopee-tiktok") prevScreen--
         return Math.max(prevScreen, 1)
       })
       setIsTransitioning(false)
@@ -78,8 +79,10 @@ export default function QuizFunil() {
 
     switch (currentScreen) {
       case 1:
-        return <ScreenEntrada {...screenProps} />
+        return <ScreenAbertura {...screenProps} />
       case 2:
+        return <ScreenEntrada {...screenProps} />
+      case 3:
         return (
           <ScreenQuestion
             question={filterQuestion}
@@ -92,7 +95,7 @@ export default function QuizFunil() {
             }}
           />
         )
-      case 3:
+      case 4:
         return (
           <ScreenQuestion
             question={specificQuestions[0]}
@@ -104,7 +107,7 @@ export default function QuizFunil() {
             }}
           />
         )
-      case 4:
+      case 5:
         return (
           <ScreenQuestion
             question={specificQuestions[1]}
@@ -116,24 +119,24 @@ export default function QuizFunil() {
             }}
           />
         )
-      case 5:
-        return <ScreenDesafio {...screenProps} />
       case 6:
-        return <ScreenRevelacao {...screenProps} />
+        return <ScreenDesafio {...screenProps} />
       case 7:
-        return <ScreenProvaResultado {...screenProps} />
+        return <ScreenRevelacao {...screenProps} />
       case 8:
-        return <ScreenUgcDemo {...screenProps} />
+        return <ScreenProvaResultado {...screenProps} />
       case 9:
-        return <ScreenVideosNegocios {...screenProps} />
+        return <ScreenUgcDemo {...screenProps} />
       case 10:
-        return <ScreenPossibilidades {...screenProps} />
+        return <ScreenVideosNegocios {...screenProps} />
       case 11:
-        return <ScreenDecisao {...screenProps} />
+        return <ScreenPossibilidades {...screenProps} />
       case 12:
+        return <ScreenDecisao {...screenProps} />
+      case 13:
         return <ScreenOferta onNext={() => { }} />
       default:
-        return <ScreenEntrada {...screenProps} />
+        return <ScreenAbertura {...screenProps} />
     }
   }
 
